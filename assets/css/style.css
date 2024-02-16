@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(127, 189, 189);
+}
+.secondheaderdiv {
+  background-color: rgb(43, 148, 148);
+  position: relative;
+  text-align: right;
+}
+
+.headerdiv {
+  background-color: rgb(105, 194, 194);
+}
+nav {
+  text-align: right;
+
+  display: inline;
+  align-items: first baseline;
+}
+.container1 {
+  display: flex;
+}
+
+/* Assuming you want images side by side within the main content */
+#workcontent {
+  flex: 1; /* This allows #workcontent to grow and take up remaining space */
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.imgmain {
+  flex: 1; /* Each image will take up equal space within #workcontent */
+  /* Ensure images don't exceed the container width */
+}
+
+.imgmain:hover {
+  box-shadow: 0 0 10px #333;
+}
+
+aside {
+  width: 30%;
+  height: 100%; /* flex-grow: 0; flex-shrink: 0; flex-basis: 20%; */
+
+  border-right: 5px solid black; /* Adjust border properties as needed */
+  background-color: rgb(105, 194, 194);
+}
+
+.wormain,
+.resumemain {
+  flex: 1;
+}
+
+h1 {
+  padding-top: 30px;
+}
+#footercontent {
+  display: inline;
+}
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
